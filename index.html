@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PAGE BLUR</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <section>
+      <div class="box">
+        <h1>Focus</h1>
+      </div>
+      <div class="box">
+        <h1>Focus</h1>
+      </div>
+      <div class="circle"></div>
+    </section>
+    <script>
+      const pos = document.documentElement;
+      pos.onmousemove = (e)=> {
+        console.log(e)
+        pos.style.setProperty('--x', e.clientX  + 'px');
+        pos.style.setProperty('--y', e.clientY  + 'px');
+      }
+    </script>
+  </body>
+</html>

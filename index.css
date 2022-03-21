@@ -1,0 +1,51 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+  width: 100%;
+  height: 100vh;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(https://c.wallhere.com/photos/6c/4e/1368x768_px_Coast-1295843.jpg!d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(https://c.wallhere.com/photos/6c/4e/1368x768_px_Coast-1295843.jpg!d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box:nth-child(1) {
+  filter: blur(10px);
+}
+.box:nth-child(2) {
+  clip-path: circle(150px at var(--x) var(--y));
+}
+section .box h1 {
+  position: absolute;
+  color: #fff;
+  font-size: 20em;
+  transform: translate(0, 0);
+  transform: translate(calc(var(--x)/25), calc(var(--y)/25));
+}
+.circle {
+  position: absolute;
+  top: -150px; left: -150px;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  transform: translate(var(--x), var(--y));
+}
